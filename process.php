@@ -14,8 +14,8 @@
 	$username =stripcslashes($username);
 	$password =stripcslashes($password);
 	
-	$username = mysql_real_escape_string($username);
-	$password = mysql_real_escape_string($password);
+	$username = htmlspecialchars($username);
+	$password = htmlspecialchars($password);
 	
 	
 	$query = "Select * from users where username='$username' and password='$password'";
