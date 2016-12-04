@@ -38,12 +38,12 @@ else {
 
         if ($passflag == 1 && $userflag == 1) {
             $sql = "select * from test WHERE email='" . $username . "' and name ='" . $password . "'";
-            echo $sql;
+            //echo $sql;
             $row = $conn->query($sql);
             if ($row->num_rows > 0) {
                 while($result = $row->fetch_assoc()) {
                 if ($result["email"] == $username && $result["name"] == $password) {
-                    echo "Welcome" . $username . "<br>";
+                    echo "Welcome " . $username . "<br>";
                 }
                 else {
                     echo "wrong user credentials";
